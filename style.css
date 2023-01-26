@@ -71,9 +71,14 @@ h1 {
 footer {
   text-align: center;
   color: #fff;
-  margin-top: 30%;
   padding: 16px 0;
+ 
+  bottom: 0;
+  position: fixed;
+  width: 90%;
 }
+
+
 
 @media (max-width: 500px) {
   h1 {
