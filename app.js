@@ -5,9 +5,11 @@ const daysContainer = document.querySelector("#days")
 const nextYearContainer = document.querySelector("#year")
 const spinnerLoading = document.querySelector("#loading")
 const countdownContainer = document.querySelector("#countdown")
+const currentYear = document.querySelector(".newYear");
 
 const nextYear = new Date().getFullYear() + 1
 const newYearTime = new Date(`January 01 ${nextYear} 00:00:00`)
+
 
 nextYearContainer.textContent = nextYear
 
@@ -35,6 +37,13 @@ const handleCountdownDisplay = () => {
   spinnerLoading.remove()
   countdownContainer.style.display = "flex"
 }
+
+function currentFullYear() {
+  const newYear = new Date().getFullYear();
+  currentYear.textContent = newYear;
+}
+
+currentFullYear();
 
 setTimeout(handleCountdownDisplay, 1000)
 
